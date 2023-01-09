@@ -1,0 +1,44 @@
+<html>
+    <head><title>Ejercicio 1.1.</title>
+        <style>
+            body{
+             background-color: black;
+             color: white;
+            } 
+            #sol{
+                color:green;
+                font-size: 60px;
+            }
+         </style>
+         <script>
+            function calcularSegundos(){
+                //Crear variables y obtener valores de los inputs
+                var horas = parseInt(document.getElementById("hora").value);
+                var minutos = parseInt(document.getElementById("minuto").value);
+                var segundos = parseInt(document.getElementById("segundo").value);
+
+                //Calcular los segundos totales
+                var total = segundos + 60 * minutos + 3600 * horas;
+
+                document.getElementById("sol").innerHTML = "total: "+ total + " segundos.";
+
+               console.log("total: "+ total + " segundos.");
+            }
+
+         </script>
+    
+    </head>
+
+    <body>
+        <div id="menu">
+            <label for="hora">Hora:</label><input type="number" id="hora" min="0" max="23">
+            <br>
+            <label for="minuto">Minutos:</label><input type="number" id="minuto" min="0" max="59">
+            <br>
+            <label for="segundo">Segundos:</label><input type="number" id="segundo" min="0" max="59">
+                <br>
+            <input type="button" onclick="calcularSegundos()" value="Calcular">
+        </div>
+        <span id="sol"></span>
+    </body>
+</html>
