@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 2.1.</title>
+    </head>
+    <body>
+        <style>
+            h1{
+                color:blue;
+            }
+            #estado_id{
+                color:green;
+            }
+        </style>
+        <h1>Ejercicio 2.1.</h1>
+        <!-- 
+            Escriba, usando comparaciones, un algoritmo que muestre el 
+            estado del agua (hielo, líquido, vapor) en función 
+            de su temperatura
+        -->
+        <!--ENTRADA (Temperatura)-->
+        <label for="temperatura_id">Temperatura: </label>
+        <input type="number" id="temperatura_id" onchange="calcular()">
+
+        <!--SALIDA (Estado del Agua)-->
+        <span id="estado_id"></span>
+        <script>
+            /** 
+             * Esto es comentario en JS
+             */
+            function calcular(){
+                var temp = document.getElementById("temperatura_id").value;
+
+                if(temp < 0){
+                    console.log("hielo");
+                    document.getElementById("estado_id").innerHTML = "Hielo";
+                }else if(temp < 100){
+                    console.log("agua");
+                    document.getElementById("estado_id").innerHTML = "Agua";
+                }else{
+                    console.log("gaseoso");
+                    document.getElementById("estado_id").innerHTML = "Gaseoso";
+                }
+
+                
+            }
+
+
+
+        </script>
+
+    </body>
+</html>
